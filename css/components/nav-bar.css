@@ -1,0 +1,72 @@
+.nav{
+    background-color: #f9f9fa;
+    padding: 30px 40px;
+    border-top: 1px solid rgba(171, 171, 171, 0.315);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box; /*box 사이즈를 고정*/
+}
+.nav__ul{
+    display: flex;
+    justify-content: space-between;
+}
+.nav__a{
+    color: #2e363e;
+}
+.nav__link{
+    color: #2e363e;
+    position: relative;
+}
+@keyframes notificationAnimation{
+    0%{
+        transform: none;
+    }
+    50%{
+        transform: translateY(-5px) rotateY(180deg);
+    }
+    100%{
+        transform: none;
+    }
+}
+.nav_notification{
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    animation: notificationAnimation 2s ease-in-out infinite;
+}
+.nav__dot{
+    background-color: tomato;
+    width: 5px;
+    height: 5px;
+    border-radius: 2.5px;
+    position: absolute;
+    bottom: 16px;
+    left: 18px;
+}
+@keyframes appearBtnAnimation{
+    from{
+        opacity: 0;
+    }
+    to{
+        transform: none;
+        opacity: 1;
+    }
+}
+.nav__link{
+    transform: translateY(50px); 
+    /*자식마다 애니메이션 딜레이가 일어나는데 애니메이션 정의된 곳에 있으면
+      세 번째 자식은 1.5초 동안 애니메이션 적용이 되지 않아서 여기 넣음
+    */
+    opacity: 0;
+    animation: appearBtnAnimation 0.3s ease-in-out forwards;
+}
+.nav__link:nth-child(2){
+    animation-delay: 0.2s;
+}
+.nav__link:nth-child(3){
+    animation-delay: 0.5s;
+}
+.nav__link:last-child{
+    animation-delay: 0.8s;
+}

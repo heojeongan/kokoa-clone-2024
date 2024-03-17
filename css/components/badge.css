@@ -1,0 +1,10 @@
+.badge{
+    background-color: tomato;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px; /*width의 절반을 주면 원형됨*/
+    color: white;
+}
